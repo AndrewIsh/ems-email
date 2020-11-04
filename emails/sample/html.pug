@@ -1,0 +1,11 @@
+p Dear #{name}
+
+p You have new messages in the following queries:
+
+ul
+  each query in queries
+    li
+      if query.query.messageCount !== 1
+        a(href="#{query.url}") #{query.query.title}: #{query.query.messageCount} new messages - #{query.url}
+      else
+        a(href="#{query.url}") #{query.query.title}: #{query.query.messageCount} new message - #{query.url}

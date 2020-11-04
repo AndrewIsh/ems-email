@@ -1,0 +1,40 @@
+module.exports = {
+    apps: [
+        {
+            name: '<instance_name>-email',
+            script: 'index.js',
+            instances: 1,
+            autorestart: true,
+            watch: true,
+            max_memory_restart: '1G',
+            env: {
+                NODE_ENV: 'development',
+                PGUSER: '<db_user>',
+                PGPASSWORD: '<db_password>',
+                SCHEMA: '<db_user>',
+                KEY: '<encryption_key_must_match_ems-api>',
+                BASE_URL: '<base_url_of_frontend>'
+                EMAIL_FROM: '<email_from_address>',
+                // See https://nodemailer.com/smtp/ for all options
+                SMTP_OPTIONS: {
+                    port: '<smtp_port>',
+                    host: '<smtp_server>'
+                }
+            },
+            env_production: {
+                NODE_ENV: 'production',
+                PGUSER: '<db_user>',
+                PGPASSWORD: '<db_password>',
+                SCHEMA: '<db_user>',
+                KEY: '<encryption_key_must_match_ems-api>',
+                BASE_URL: '<base_url_of_frontend>'
+                EMAIL_FROM: '<email_from_address>',
+                // See https://nodemailer.com/smtp/ for all options
+                SMTP_OPTIONS: {
+                    port: '<smtp_port>',
+                    host: '<smtp_server>'
+                }
+            }
+        }
+    ]
+};

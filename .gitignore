@@ -105,3 +105,10 @@ dist
 
 # IDE specific settings
 /.vscode
+
+# Any custom email templates
+emails/*
+!emails/sample/
+
+# In use ecosystem
+ecosystem.config.js
