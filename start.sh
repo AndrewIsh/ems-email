@@ -30,6 +30,7 @@ KEY_LEN=$(echo -n $key | wc -m)
 if [[ $KEY_LEN = 0 ]]
 then
   echo "Invalid key passed"
+  exit
 fi
 
 KEY=$key pm2 start --only $instance --env $env
