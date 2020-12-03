@@ -15,7 +15,8 @@ module.exports = {
                 PGPASSWORD: '<db_password>',
                 SCHEMA: '<db_user>',
                 BASE_URL: '<base_url_of_frontend>'
-                EMAIL_FROM: '<email_from_address>',
+                FROM: '<email_from>',
+                REPLY_TO: '<email_reply_to>',
                 // See https://nodemailer.com/smtp/ for all options
                 SMTP_OPTIONS: {
                     port: '<smtp_port>',
@@ -28,7 +29,8 @@ module.exports = {
                 PGPASSWORD: '<db_password>',
                 SCHEMA: '<db_user>',
                 BASE_URL: '<base_url_of_frontend>'
-                EMAIL_FROM: '<email_from_address>',
+                FROM: '<email_from>',
+                REPLY_TO: '<email_reply_to>',
                 // See https://nodemailer.com/smtp/ for all options
                 SMTP_OPTIONS: {
                     port: '<smtp_port>',

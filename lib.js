@@ -16,7 +16,8 @@ const sendEmail = async ({to, name, queries, type}) => {
         });
         content = {
             ...content,
-            from: process.env.EMAIL_FROM,
+            from: process.env.FROM,
+            replyTo: process.env.REPLY_TO,
             to
         }
         const result = transporter.sendMail(content).then(async () => {
