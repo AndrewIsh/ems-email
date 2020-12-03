@@ -14,7 +14,7 @@ module.exports = {
                 PGUSER: '<db_user>',
                 PGPASSWORD: '<db_password>',
                 SCHEMA: '<db_user>',
-                BASE_URL: '<base_url_of_frontend>'
+                BASE_URL: '<base_url_of_frontend>',
                 FROM: '<email_from>',
                 REPLY_TO: '<email_reply_to>',
                 // See https://nodemailer.com/smtp/ for all options
