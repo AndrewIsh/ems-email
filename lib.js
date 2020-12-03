@@ -4,8 +4,11 @@ const nodemailer = require('nodemailer');
 const db = require('../ems-db');
 
 const email = new Email();
-let smtpOptions = JSON.parse(process.env.SMTP_OPTIONS);
-smtpOptions = {...smtpOptions, send: true};
+const smtpOptions = {
+    send: true,
+    host: process.env.SMTP_HOST,
+    port: process.env.SMTP_PORT
+};
 const transporter = nodemailer.createTransport(smtpOptions);
 
 const sendEmail = async ({to, name, queries, type}) => {

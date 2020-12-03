@@ -17,11 +17,8 @@ module.exports = {
                 BASE_URL: '<base_url_of_frontend>',
                 FROM: '<email_from>',
                 REPLY_TO: '<email_reply_to>',
-                // See https://nodemailer.com/smtp/ for all options
-                SMTP_OPTIONS: {
-                    port: '<smtp_port>',
-                    host: '<smtp_server>'
-                }
+                SMTP_HOST: '<smtp_host>',
+                SMTP_PORT: '<smtp_port>'
             },
             env_production: {
                 NODE_ENV: 'production',
@@ -31,11 +28,8 @@ module.exports = {
                 BASE_URL: '<base_url_of_frontend>'
                 FROM: '<email_from>',
                 REPLY_TO: '<email_reply_to>',
-                // See https://nodemailer.com/smtp/ for all options
-                SMTP_OPTIONS: {
-                    port: '<smtp_port>',
-                    host: '<smtp_server>'
-                }
+                SMTP_HOST: '<smtp_host>',
+                SMTP_PORT: '<smtp_port>'
             }
         }
     ]
