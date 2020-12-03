@@ -1,0 +1,11 @@
+p Dear #{name}
+
+p The following queries have been created:
+
+ul
+  each query in queries
+    li
+      if query.query.messageCount !== 1
+        a(href="#{query.url}") #{query.query.title}: #{query.query.messageCount} new messages - #{query.url}
+      else
+        a(href="#{query.url}") #{query.query.title}: #{query.query.messageCount} new message - #{query.url}
